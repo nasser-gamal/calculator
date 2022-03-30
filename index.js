@@ -9,15 +9,19 @@ button.forEach((btn) => {
 function check() {
   if (this.innerHTML == "AC") {
     output.innerHTML = "";
-      result.innerHTML = "0";
-      output.style.animation = ""
-      result.style.animation = "";
+    result.innerHTML = "0";
+    output.style.animation = "";
+    result.style.animation = "";
     return;
   }
 
   if (this.innerHTML == "DEL") {
-      output.innerHTML = output.innerHTML.substr(0, output.innerHTML.length - 1);
-
+    output.innerHTML = output.innerHTML.substr(0, output.innerHTML.length - 1);
+    if (output.innerHTML == "") {
+      result.innerHTML = "0";
+      output.style.animation = "";
+      result.style.animation = "";
+    }
     return;
   }
 
@@ -26,11 +30,11 @@ function check() {
   }
 
   if (this.innerHTML == "=") {
-      result.innerHTML = eval(output.innerHTML);
-      output.style.animation = "smaller 0.3s ease-in-out "
-      output.style.animationFillMode = "forwards";
-      result.style.animation = "biger 0.3s ease-in-out ";
-      result.style.animationFillMode = "forwards";
+    result.innerHTML = eval(output.innerHTML);
+    output.style.animation = "smaller 0.3s ease-in-out ";
+    output.style.animationFillMode = "forwards";
+    result.style.animation = "biger 0.3s ease-in-out ";
+    result.style.animationFillMode = "forwards";
   } else {
     output.innerHTML += this.innerHTML;
   }
