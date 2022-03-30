@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #00bcd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    width: 310px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 7px 3px #00000094;
+}
+.calculator .display {
+    height: 100px;
+    color: white;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: right;
+}
+.display div {
+    padding: 15px;
+}
+.display .result {
+    font-size: 16px;
+    font-weight: bold;
+}
+.display .nums {
+    font-size: 25px;
+    font-weight: bold;
+}
+.calc {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+}
+.calc button {
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+}
+
+/* Start Animation */
+
+@keyframes biger {
+    from {
+        font-size: 16px;
+    }
+    to {
+        font-size: 25px;
+    }
+}
+@keyframes smaller {
+    from {
+        font-size: 25px;
+    }
+    to {
+        font-size: 16px;
+    }
+}
